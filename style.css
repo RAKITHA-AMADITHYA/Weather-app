@@ -1,0 +1,1425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --main-color: #34b77d;
+    --black: #13131a;
+    --bg: #010103;
+    --borde: .1rem solid rgba(255, 255, 255, .3);
+
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+
+}
+
+
+.header {
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    border-bottom: var(--borde);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .forcastLogo{
+    margin-left: 20px;
+}
+
+.header .logo img {
+    height: 4rem;
+    margin-left: -15px;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(Images/tropical-rainforest-adventure-green-mystery-nature-generated-by-ai.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .textBox {
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+}
+
+.home .textBox p {
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: 90px;
+}
+
+.home .textBox h1 {
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: 30px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(Images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+
+.home .textBox h3 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+
+
+/*
+  __________________________________
+/             About us page         \
+               (Starts)
+\___________________________________/
+
+*/
+.AboutUs .heading{
+    font-size: 6rem;
+    margin-top: 100px;
+}
+.AboutUs  h3{
+ color: #ccc;
+ margin-left: 600px;
+ margin-top: 20px;
+ font-size: 5rem;
+}
+.AboutUs h4{
+    color: #ccc;
+    margin-top: 100px;
+    margin-left: 600px;
+    font-size: 25px;
+}
+
+.AboutUs .container-animation{
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.AboutUs h6{
+    color: #ccc;
+    font-size: 17px;
+    margin-left: 600px;
+}
+
+.AboutUs p{
+    color: #dfd9d9;
+    margin-top: 45px;
+    margin-left: 600px;
+    font-size: 2rem;
+    font-style: oblique;
+}
+.AboutUs .container-animation .cloud{
+    position: relative;
+    top: 50px;
+    width: 320px;
+    height: 30%;
+    background: #fff;
+    border-radius: 100px;
+    z-index: 100;
+    filter: drop-shadow(0 0 35px #fff);
+    margin-left: 84px;
+    margin-top: -407px;
+    
+}
+
+
+.AboutUs .container-animation .cloud::before {
+
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 110px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 90px 0 0 30px #fff;
+}
+
+.AboutUs .container-animation .cloud .text{
+   position: absolute;
+   top: 40px;
+   height: 20px;
+   line-height: 20px;
+   text-transform: uppercase;
+   color: #fff;
+   text-shadow: 0 0 5px #fff
+   ,0 0 15px #fff,
+   0 0 30px #fff  ;
+   transform-origin: bottom;
+   animation: animate 2s linear forwards;
+   
+} 
+
+@keyframes animate
+{
+    /* Change '0%' to '0%' to '100%' */
+    0%
+    {
+        transform: translateY(0) scale(1);
+    }
+    /* Change '0%' to '70%' */
+    70%
+    {
+        transform: translateY(290px) scale(1);
+    }
+    /* Remove the duplicate '0%' and change it to '100%' */
+    100%
+    {
+        transform: translateY(290px) scale(0);
+    }
+}
+/*
+  __________________________________
+/            About us   page        \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+/*
+  __________________________________
+/        Weather Forcast page      \
+               (Starts)
+\___________________________________/
+
+*/
+
+
+
+.forcast {
+    background:url(Images/fdsfhk.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.forcast .heading {
+    background: #000000;
+    margin-top: 120px;
+}
+
+.forcast .container-forcast {
+    display: flex;
+    gap: 35px;
+    padding: 30px;
+}
+
+.forcast .weather-input input {
+    width: 100%;
+    height: 46px;
+    outline: none;
+    padding: 0 15px;
+    margin: 10px 0 20px 0;
+    font-size: 1.07rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.forcast .weather-input {
+    width: 550px;
+}
+
+.forcast .weather-input h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.forcast .weather-input button {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    transition: .3s linear;
+    font-size: 1.5rem;
+
+}
+
+.forcast .weather-input button:hover {
+    background-color: #34b77d;
+    color: #010103;
+}
+
+.forcast .weather-input .seperator {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #9aa0a0;
+}
+
+.forcast .weather-input .location-btn {
+    background: #6b6d6d;
+    color: #fff;
+}
+
+.forcast .weather-data {
+    width: 40%;
+    margin-left: 170px;
+    
+}
+.forcast .weather-cards{
+    display: flex;
+    gap: 30px;
+    margin-left: -790px;
+    margin-top: 0px;
+    width: 5rem;
+}
+
+.forcast .current-weather {
+    background:transparent;
+    padding: 20px 70px 20px 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+
+}
+
+.forcast .current-weather h2 {
+    font-size: 40px;
+    color: #fff;
+}
+.forcast .current-weather .icon{
+    text-align: center;
+}
+.footer ,.current-weather .details{
+    margin-left: -102px;
+}
+
+.forcast .current-weather .icon img{
+    max-width: 800px;
+    margin-left: 210px;
+    margin-top: -126px;
+    width: 10.5rem;
+}
+.forcast .current-weather .icon h4{
+    margin-top: -10px;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 5.5rem;
+    
+}
+
+.forcast .weather-data h4 {
+    margin-top: 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #dddada;
+}
+.forcast .weather-cards .card {
+    padding: 80px; /* Adjust the value to increase or decrease the space */
+}
+
+
+.forcast .days-forcast h3{
+    font-size: 3rem;
+    margin: 20px 0; 
+}
+
+.forecast-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.forcast .days-forcast {
+    color: #dbe4e4;
+}
+
+.weathre-cards .card img {
+    max-width: 150px;
+    margin: 5px 0 -12px 0;
+    margin-top: -30px;
+    
+}
+
+
+/*
+  __________________________________
+/        Weather Forcast page      \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+
+
+
+
+/*
+  __________________________________
+/         Weather News page         \
+               (Starts)
+\___________________________________/
+
+*/
+.news .heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 7rem;
+    margin-top: 100px;
+}
+
+.news .heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.news .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.news .box-container .box {
+    border: var(--borde);
+
+}
+
+.news .order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news .box-container .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.news .box-container .box .image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.news .box-container .box:hover .image img {
+    transform: scale(1.2);
+}
+
+.news .box-container .box .content {
+    padding: 2rem;
+}
+
+.news .box-container .box .content .title {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+
+.news .box-container .box .content .title:hover {
+    color: var(--main-color);
+}
+
+
+.news .box-container .box .content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 1rem 0;
+}
+/*
+  __________________________________
+/         Weather News page         \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+
+/*
+  __________________________________
+/           Subscribe page         \
+              (Starts)
+\___________________________________/
+
+*/
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 7rem;
+    
+}
+
+.heading span {
+    color: #34b77d;
+    text-transform: uppercase;
+}
+
+.pricing-table {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+}
+
+.prciing-card {
+    flex: 1;
+    max-width: 360px;
+    background-color: #fff;
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #2d2d2d;
+    transition: .3s linear;
+    border-radius: 8px;
+    height: 540px;
+
+}
+
+.pricing-card-header {
+    background-color: var(--main-color);
+    display: inline-block;
+    color: #0f0c0c;
+    padding: 12px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+}
+
+.prciing-card:hover .pricing-card-header {
+    box-shadow: 0 0 0 20em #34b77d;
+
+}
+
+.price {
+    font-size: 70px;
+    color: #34b77d;
+    margin: 40px;
+    transition: .2s linear;
+}
+
+.price sup,
+.price span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.prciing-card:hover,
+.prciing-card:hover .price {
+    color: #000000;
+}
+
+.prciing-card li {
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+
+.order-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border: 2px solid #34b77d;
+    color: #34b77d;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+    font-size: 20px;
+}
+
+.order-btn:hover {
+    background-color: #34b77d;
+    color: #010103;
+}
+
+/*
+  __________________________________
+/            Subscribe page         \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+/*
+  __________________________________
+/      Customer Review page         \
+             (Starts)
+\___________________________________/
+
+*/
+
+
+.review .heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 7rem;
+    margin-top: 42px;
+}
+
+.review .heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box {
+    border: var(--borde);
+    text-align: center;
+    padding: 3rem 2rem;
+    background:url(Images/2942765.jpg);
+    border-radius: 7px;
+}
+
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #fffdfd;
+    padding: 2rem 0;
+    
+}
+
+
+
+.review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.review .box-container .box h3 {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+.review .box-container .box .stars i {
+
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+/*
+  __________________________________
+/      Customer Review page         \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+
+/*
+  __________________________________
+/         Contact us page           \
+              (Starts)
+\___________________________________/
+
+*/
+.contact .heading {
+    margin-top: 80px;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contact .row form .input-box {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--black);
+    border: var(--borde);
+}
+
+.contact .row form .input-box span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-box input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+    margin-left: 10px;
+}
+
+
+.contact .order-btn {
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+
+/*
+  __________________________________
+/           Contact us page         \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+/*
+  __________________________________
+/              Footer               \
+              (Starts)
+\___________________________________/
+
+*/
+
+.footer {
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--borde);
+    margin: .3rem;
+    border-radius: 50%;
+
+}
+
+.footer .share a:hover {
+    background-color: var(--main-color);
+    color: #010103;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--borde);
+    font-size: 2rem;
+}
+
+.footer .links a:hover {
+    background: var(--main-color);
+    color: #010103;
+}
+
+
+.footer .credit {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credit span {
+    color: #df8909;
+}
+
+
+/*
+  __________________________________
+/              Footer               \
+               (Ends)
+\___________________________________/
+
+*/
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------*/
+
+/*Media queries*/
+
+
+/*
+  __________________________________
+/          Home page media          \
+              (Start)
+\___________________________________/
+
+*/
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 5%;
+    }
+
+    .header .logo img {
+        height: 3rem;
+    }
+
+    .header .navbar {
+        display: none; /* Hide the navigation links */
+    }
+
+    .header .homepage {
+        display: block; /* Show a mobile-friendly menu icon here */
+    }
+
+    .home .textBox p {
+        font-size: 60px;
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+
+    .home .textBox h1 {
+        font-size: 90px;
+        line-height: 80px;
+        margin-left: 15px;
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    .home .textBox h3 {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+}
+
+/* For screens between 769px and 1024px (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 1rem 5%;
+    }
+
+    .header .logo img {
+        height: 3.5rem;
+    }
+
+    .header .navbar {
+        margin-left: auto; /* Push the navigation links to the right */
+    }
+
+    .header .navbar a {
+        margin: 0 0.8rem;
+    }
+}
+
+/* For screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+    .header {
+        padding: 1.5rem 7%;
+    }
+
+    .header .logo img {
+        height: 4rem;
+    }
+
+    .header .navbar {
+        display: flex; /* Restore the display of navigation links */
+    }
+
+    .header .navbar a {
+        margin: 0 1rem;
+        font-size: 1.6rem;
+    }
+
+    .header .homepage {
+        display: none; /* Hide the mobile-friendly menu icon */
+    }
+
+    .home {
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home .textBox p {
+        font-size: 90px;
+        margin-left: 30px;
+        margin-top: 90px;
+    }
+
+    .home .textBox h1 {
+        font-size: 190px;
+        line-height: 160px;
+        margin-left: 30px;
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    .home .textBox h3 {
+        font-size: 40px;
+        margin-left: 40px;
+    }
+}
+
+
+/*
+  __________________________________
+/          Home page media          \
+                (End)
+\___________________________________/
+
+*/
+
+
+/*
+  __________________________________
+/          ABOUT US page media       \
+              (Start)
+\___________________________________/
+
+*/
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    .AboutUs .heading {
+        font-size: 4rem;
+        text-align: center; /* Center align the heading */
+    }
+
+    .AboutUs h3 {
+        font-size: 3rem;
+        text-align: center; /* Center align the subheading */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px;
+    }
+
+    .AboutUs p {
+        margin-top: 20px;
+        margin-left: 0; /* Remove left margin */
+        font-size: 1.6rem;
+        text-align: center; /* Center align the text */
+    }
+
+    .AboutUs .container-animation {
+        height: auto; /* Adjust the height as needed */
+    }
+
+    .AboutUs .container-animation .cloud {
+        width: 240px;
+        height: 20%;
+        margin-left: auto;
+        margin-right: auto; /* Center the cloud */
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+}
+
+/* For screens between 769px and 1024px (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust styles as needed for medium-sized screens */
+}
+
+/* For screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+    /* Adjust styles as needed for large screens */
+}
+
+
+
+/*
+  __________________________________
+/          ABOUT US page media          \
+              (Start)
+\___________________________________/
+
+*/
+
+
+/*
+  __________________________________
+/      Weather Forcast media        \
+              (Start)
+\___________________________________/
+
+*/
+
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    .forcast .container-forcast {
+        flex-direction: column;
+        gap: 05px;
+        padding: 20px;
+    }
+
+    .forcast .weather-input {
+        width: 100%;
+    }
+
+    .forcast .weather-data {
+        width: 10%;
+        margin-left: 100px;
+    }
+
+    .forcast .current-weather .icon img {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .forecast-container {
+        flex-wrap: wrap;
+    }
+
+    .days-forcast {
+        width: calc(50% - 20px);
+    }
+}
+
+/* For screens between 769px and 1024px (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .forcast .container-forcast {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .forecast-container {
+        flex-wrap: wrap;
+    }
+
+    .days-forcast {
+        width: calc(50% - 20px);
+    }
+}
+
+/* For screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+    .forecast .container-forcast {
+        gap: 35px;
+        padding: 30px;
+    }
+
+    .forcast .weather-input {
+        width: 550px;
+    }
+
+    .forcast .weather-data {
+        width: 40%;
+        margin-left: 170px;
+    }
+
+    .forecast-container {
+        flex-wrap: nowrap;
+    }
+
+    .days-forcast {
+        width: calc(25% - 20px);
+    }
+}
+/*
+  __________________________________
+/      Weather Forcast media        \
+               (End) 
+\___________________________________/
+
+*/
+
+/*
+  __________________________________
+/      Weather News media           \
+               (Start) 
+\___________________________________/
+
+*/
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    .news .heading {
+        font-size: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .news .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .news .box-container .box .image {
+        height: 18rem;
+    }
+
+    .news .box-container .box .content {
+        padding: 1rem;
+    }
+
+    .news .box-container .box .content .title {
+        font-size: 2rem;
+    }
+
+    .news .box-container .box .content p {
+        font-size: 1.4rem;
+    }
+}
+
+/* For screens between 769px and 1024px (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .news .heading {
+        font-size: 4.5rem;
+        padding-bottom: 2rem;
+    }
+    
+    .news .box-container {
+        gap: 1rem;
+    }
+
+    .news .box-container .box .image {
+        height: 20rem;
+    }
+
+    .news .box-container .box .content .title {
+        font-size: 2.2rem;
+    }
+
+    .news .box-container .box .content p {
+        font-size: 1.5rem;
+    }
+}
+
+/* For screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+    /* You can adjust the styles for larger screens here */
+}
+
+
+
+
+/*
+  __________________________________
+/      Weather News media           \
+               (End) 
+\___________________________________/
+
+*/
+
+/*
+  __________________________________
+/      Subscribe     media           \
+               (Starts) 
+\___________________________________/
+
+*/
+
+/* Media Query for screens up to 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .price {
+        font-size: 40px;
+        margin: 20px;
+    }
+
+    .price sup,
+    .price span {
+        font-size: 18px;
+    }
+
+    .prciing-card {
+        max-width: 300px;
+        margin: 20px 5px;
+    }
+
+    .order-btn {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Media Query for screens up to 480px (mobile devices) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    .price {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .price sup,
+    .price span {
+        font-size: 16px;
+    }
+
+    .prciing-card {
+        max-width: 280px;
+        margin: 10px 5px;
+    }
+
+    .order-btn {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+/* Media Query for screens up to 320px (smaller mobile devices) */
+@media (max-width: 320px) {
+    .heading {
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .price {
+        font-size: 24px;
+        margin: 5px;
+    }
+
+    .price sup,
+    .price span {
+        font-size: 14px;
+    }
+
+    .prciing-card {
+        max-width: 260px;
+        margin: 5px;
+    }
+
+    .order-btn {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+
+
+/*
+  __________________________________
+/      Subscribe     media           \
+               (Endss) 
+\___________________________________/
+
+*/
+
+
+/*
+  __________________________________
+/      Cus review    media           \
+               (Starts) 
+\___________________________________/
+
+*/
+
+/* Media Query for screens up to 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    .review .heading {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .review .box-container .box {
+        padding: 2rem 1rem;
+    }
+
+    .review .box-container .box p {
+        font-size: 1.2rem;
+    }
+
+    .review .box-container .box h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Query for screens up to 480px (mobile devices) */
+@media (max-width: 480px) {
+    .review .heading {
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .review .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .review .box-container .box {
+        padding: 1.5rem 1rem;
+    }
+
+    .review .box-container .box p {
+        font-size: 1.1rem;
+    }
+
+    .review .box-container .box h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Media Query for screens up to 320px (smaller mobile devices) */
+@media (max-width: 320px) {
+    .review .heading {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .review .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .review .box-container .box {
+        padding: 1rem 0.5rem;
+    }
+
+    .review .box-container .box p {
+        font-size: 1rem;
+    }
+
+    .review .box-container .box h3 {
+        font-size: 1.2rem;
+    }
+
+    .review .box-container .box .user {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+
+/*
+  __________________________________
+/      Cus review    media           \
+               (Ends) 
+\___________________________________/
+
+*/
+
+
+
+/*
+iphone se
+iphone xr
+iphone 12pro max
+pixel 5
+Samsung galaxy s8+
+Samsung galaxy s20 ultra
+ipad air
+i pad mini
+suface pro 7
+surface Duo
+Galaxy fold
+samsung galaxy A51/71
+Nest hub
+Nest hub max
+Facebook for Android v407 on pixel 6
+*/
